@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="temp.css">
+    <link rel="shortcut icon" href="temo.png" type="image/x-icon">
+    <script src="temp.js" defer></script>
+</head>
+
+<body>
+    <div class="container"><i class="fa-solid fa-temperature-high"></i>
+        <h1 class="head">Temperature Converter</h1>
+
+        <div class="inputs">
+            <div class="deg-in">
+                <label for="degree">Degree</label>
+                <input type="number" placeholder="00" id="degree" name="degree">
+            </div>
+
+            <div class="typ-in">
+                <label for="temp_type">Type</label>
+                <select name="temperature" id="temp_type">
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="result">
+            <h3 class="res-head">Result(in Celsius)</h3>
+            <h2 id="cel_val"></h2>
+        </div>
+        <button id="cnvrt">CONVERT</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    background-image: url(png.webp);
+    background-size: 75%;
+}
+.container{
+    width: 25em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 7em 0;
+    padding: 15px;
+    border: 5px wheat solid;
+    border-radius: 30px;
+    /* background-color: whitesmoke; */
+    backdrop-filter: blur(15px);
+    /* box-shadow: 10px 10px 30px black,inset 10px 10px 30px white,inset -10px -10px 30px black; */
+}
+
+.head{
+    position: relative;
+}
+
+.head::after {
+    content: "";
+    position: absolute;
+    bottom:0em;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: rgb(76, 75, 72);
+    transition: 0.3s;
+    transition-timing-function: ease;
+    transform: scaleX(0);
+}
+.container:hover .head::after{
+    transform: scaleX(1)
+}
+
+i{
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.861);
+    text-shadow: 5px 1px 5px black;
+}
+.inputs{    
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.inputs label{
+    margin: 10px 0;
+}
+.deg-in,.typ-in{
+    display: flex;
+    flex-direction: column;
+}
+
+#degree,#temp_type{
+    border-style: none none solid;
+    border-bottom: 2px solid;
+    padding: 10px;
+    background-color: transparent;
+    width: 8em;
+}
+label{
+    font-weight: 600;
+    text-decoration: underline rgb(59, 58, 58);
+}
+#degree::placeholder{
+    color: white;
+    display: flex;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 20px 0;
+}
+.res-head{
+    text-decoration: underline;
+}
+#cel_val{
+    width: 100%;
+    border-bottom: 2px solid;
+    padding: 5px;
+}
+#cnvrt{
+    width: 70%;
+    padding: 15px 80px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+#cnvrt:hover {
+    background: linear-gradient(to bottom, #4a47e7, #322fda);
+  }
